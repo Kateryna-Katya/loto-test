@@ -2,11 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/loto-test/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/loto-test/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>G&G</title>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+            integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <script type="module" crossorigin src="/loto-test/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/loto-test/assets/index-Bj86_6dt.css">
+    <link rel="stylesheet" crossorigin href="/loto-test/assets/index-BCHSQjLj.css">
   </head>
   <body>
     <header class="header">
@@ -18,7 +24,21 @@
 
     <main>
       <!-- Loads the specified .html file -->
-      
+      <!-- Hero -->
+ <section class="hero-section">
+    <div class="container hero-conteiner">
+        <h1 class="hero-title">Гурт «Грим та Грім»</h1>
+        <p class="under-title">Справжній український рок, який гуркоче в серці.</p>
+        <div class="hero-text-wrapper">
+            <p>«Грим та Грім» — це поєднання <span class="span">потужних</span> гітарних рифів, чесних текстів і вибухової енергії сцени. Ми граємо для тих, хто
+            цінує живий звук, свободу та силу музики.</p>
+            <p><span class="span">Наші концерти</span> — це завжди контакт з залом, драйв і емоції. Приєднуйся до нас на найближчих виступах і відчуй цей саунд
+            наживо!</p>
+        </div>
+        <button class="hero-btn order-btn" id="openPopupBtn">ЗАКАЗАТИ КВИТОК</button>
+        <p id="responseMessage" class="response-msg"></p>
+    </div>
+ </section>
     </main>
 
     <footer class="footer">
@@ -27,6 +47,17 @@
   </div>
 </footer>
 
+    <div class="popup-wrapper" id="popupWrapper">
+    <div class="popup">
+        <span class="close-popup" id="closePopup">✖</span>
+        <h2 class="popup-title">Замовлення квитка</h2>
+        <form id="sendForm" class="popup-form">
+            <input class="popup-input" type="text" id="name" placeholder="Ваше ім'я" required />
+            <input class="popup-input" type="email" id="email" placeholder="Email" required />
+            <button class="hero-btn" type="submit">Відправити</button>
+        </form>
+    </div>
+</div>
 
   </body>
 </html>
