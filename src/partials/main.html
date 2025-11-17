@@ -1,4 +1,4 @@
-<!-- Hero -->
+<!-- HERO -->
  <section class="hero-section">
     <div class="container hero-conteiner">
         <h1 class="hero-title">Гурт «Грим та Грім»</h1>
@@ -9,7 +9,53 @@
             <p><span class="span">Наші концерти</span> — це завжди контакт з залом, драйв і емоції. Приєднуйся до нас на найближчих виступах і відчуй цей саунд
             наживо!</p>
         </div>
-        <button class="hero-btn order-btn" id="openPopupBtn">ЗАКАЗАТИ КВИТОК</button>
+        <button class="hero-btn openPopupBtn order-btn">ЗАКАЗАТИ КВИТОК</button>
         <p id="responseMessage" class="response-msg"></p>
     </div>
  </section>
+<!-- CONCERTS TABLE -->
+<section class="concerts-section">
+    <div class="container concerts-container">
+        <div class="concerts-wrapper">
+            <h2 class="concerts-title">Найближчі концерти</h2>
+            <div class="card concerts-card">
+                <table class="concerts-table" aria-label="Концерти">
+                    <thead >
+                        <tr class="about-concerts">
+                            <th>Місто / Заклад</th>
+                            <th>К-сть місць</th>
+                            <th>Дата і час</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="about-concerts-next">
+                            <td>Київ — Docker-G Pub</td>
+                            <td>250</td>
+                            <td>25.10.2025, 19:00</td>
+                            <td><button class="openPopupBtn buy-btn">Замовити квиток</button></td>
+                        </tr>
+                        <tr class="about-concerts-next">
+                            <td>Львів — IFESTrepublic</td>
+                            <td>400</td>
+                            <td>01.11.2025, 20:00</td>
+                            <td><button class="openPopupBtn buy-btn">Замовити квиток</button></td>
+                        </tr>
+                        <tr class="about-concerts-next">
+                            <td>Одеса — Зелений театр</td>
+                            <td>700</td>
+                            <td>09.11.2025, 19:30</td>
+                            <td><button class="openPopupBtn buy-btn">Замовити квиток</button></td>
+                        </tr>
+                        <tr class="about-concerts-next">
+                            <td>Харків — ArtZavod</td>
+                            <td>500</td>
+                            <td>16.11.2025, 19:00</td>
+                            <td><button class="openPopupBtn buy-btn">Замовити квиток</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

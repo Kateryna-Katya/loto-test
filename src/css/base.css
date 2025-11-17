@@ -9,3 +9,11 @@ h2{
   font-size: 24px;
   font-weight: 600;
 }
+th{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+td{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
