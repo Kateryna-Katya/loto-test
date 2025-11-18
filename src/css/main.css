@@ -238,14 +238,19 @@ width: 280px;
   @media only screen and (min-width: 1200px) {
 .history-section {
     background-position: top 140px right 120px, bottom center;
-    background-size: 600px 220px, cover;
+    background-size: 500px 190px, cover;
 }
   .history-title {
       text-align: left;
       font-size: 36px;
   }
   .history-item-one{
-    width: 610px;
+    width: 710px;
   }
   }
+@media only screen and (min-width: 1441px) {
+.history-section {
+        background-position: top 140px right 260px, bottom center;
+    }
+}
 
