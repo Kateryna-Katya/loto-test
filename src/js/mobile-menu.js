@@ -1,0 +1,57 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.querySelector('.menu-button');
+    const iconContainer = menuBtn.querySelector('.icon');
+    const modalMenu = document.querySelector('.modal');
+    const menuItem = document.querySelectorAll('.menu-list-item');
+    const header = document.querySelector('.header');
+  
+    let isMenuOpen = false;
+  
+    const burgerIcon = `
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.39999 9.33324C4.39999 8.81777 4.81786 8.3999 5.33333 8.3999H26.6667C27.1821 8.3999 27.6 8.81777 27.6 9.33324C27.6 9.8487 27.1821 10.2666 26.6667 10.2666H5.33333C4.81786 10.2666 4.39999 9.8487 4.39999 9.33324Z" fill="#E7F7F8" />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.39999 16C4.39999 15.4845 4.81786 15.0667 5.33333 15.0667H26.6667C27.1821 15.0667 27.6 15.4845 27.6 16C27.6 16.5154 27.1821 16.9333 26.6667 16.9333H5.33333C4.81786 16.9333 4.39999 16.5154 4.39999 16Z" fill="#E7F7F8" />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.39999 22.6665C4.39999 22.151 4.81786 21.7332 5.33333 21.7332H26.6667C27.1821 21.7332 27.6 22.151 27.6 22.6665C27.6 23.182 27.1821 23.5998 26.6667 23.5998H5.33333C4.81786 23.5998 4.39999 23.182 4.39999 22.6665Z" fill="#E7F7F8" />
+</svg>
+    `;
+  
+    const crossIcon = `
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.74035 8.74042C9.10484 8.37593 9.69579 8.37593 10.0603 8.74042L23.2596 21.9398C23.6241 22.3042 23.6241 22.8952 23.2596 23.2597C22.8951 23.6242 22.3042 23.6242 21.9397 23.2597L8.74035 10.0604C8.37586 9.69587 8.37586 9.10491 8.74035 8.74042Z" fill="white" />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.74036 23.2597C8.37587 22.8952 8.37587 22.3043 8.74036 21.9398L21.9397 8.74045C22.3042 8.37596 22.8951 8.37596 23.2596 8.74045C23.6241 9.10494 23.6241 9.69589 23.2596 10.0604L10.0603 23.2597C9.69581 23.6242 9.10485 23.6242 8.74036 23.2597Z" fill="white" />
+</svg>
+    `;
+  
+    menuBtn.addEventListener('click', () => {
+      isMenuOpen = !isMenuOpen;
+      iconContainer.innerHTML = isMenuOpen ? crossIcon : burgerIcon;
+      isMenuOpen ? openModal() : closeModal();
+    });
+  
+    menuItem.forEach(item =>
+      item.addEventListener('click', () => {
+        closeModal();
+        iconContainer.innerHTML = burgerIcon;
+        isMenuOpen = false;
+      })
+    );
+  
+    window.addEventListener('scroll', blurHeader);
+  
+    function openModal() {
+      modalMenu.style.display = 'block';
+    }
+  
+    function closeModal() {
+      modalMenu.style.display = 'none';
+    }
+  
+    function blurHeader() {
+      if (!header) return;
+      if (window.scrollY > 60) {
+        header.classList.add('header-scroll');
+      } else {
+        header.classList.remove('header-scroll');
+      }
+    }
+  });
